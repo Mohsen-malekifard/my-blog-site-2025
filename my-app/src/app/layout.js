@@ -12,7 +12,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         <NavBar/>
-        <div  style={{"paddingTop" : "50px"}} >
+        <div  style={{"paddingTop" : "20px"}} >
           {children}
         </div>
       </body>
