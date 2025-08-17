@@ -17,8 +17,8 @@ export default function NavBar() {
           </div>
           <div className="hidden md:flex space-x-8 items-center">
             <Link href="/"><a className="text-white hover:text-yellow-300 transition-all duration-300 font-semibold">Home</a></Link>
-            <Link href="/about"><a className="text-white hover:text-yellow-300 transition-all duration-300 font-semibold">About</a></Link>
-            <Link href="/blog"><a className="text-white hover:text-yellow-300 transition-all duration-300 font-semibold">Blog</a></Link>
+            <Link href="/About"><a className="text-white hover:text-yellow-300 transition-all duration-300 font-semibold">About</a></Link>
+            <Link href="/Blog"><a className="text-white hover:text-yellow-300 transition-all duration-300 font-semibold">Blog</a></Link>
           </div>
           <div className="md:hidden flex items-center">
             <button onClick={() => setIsOpen(!isOpen)} className="text-white focus:outline-none transform hover:scale-110 transition-transform duration-200">
