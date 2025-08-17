@@ -1,5 +1,6 @@
 import data5 from "@/app/lib/data";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function BlogCards() {
   return (
@@ -8,10 +9,10 @@ export default function BlogCards() {
         {/* Section Header */}
         <div className="text-center mb-12">
           <h1 className="text-4xl font-extrabold text-gray-900 sm:text-5xl">
-            Latest Articles
+            مقالات آموزشی
           </h1>
           <p className="mt-3 text-lg text-gray-600 max-w-2xl mx-auto">
-            Discover insightful stories, tips, and resources from our blog.
+            جدیدترین مقالات، آموزش‌ها و مطالب کاربردی در حوزه تکنولوژی و یادگیری.
           </p>
         </div>
 
@@ -20,16 +21,27 @@ export default function BlogCards() {
           {data5.map((blog) => (
             <li
               key={blog.id}
-              className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition duration-300 overflow-hidden border border-gray-100 group"
+              className="bg-white rounded-2xl shadow hover:shadow-xl transition duration-300 overflow-hidden border border-gray-200 group flex flex-col"
             >
-              {/* Blog Thumbnail (Placeholder if no image) */}
-              <div className="h-48 bg-gradient-to-r from-indigo-500 to-purple-600 group-hover:scale-105 transform transition duration-300 flex items-center justify-center text-white font-bold text-2xl">
-                {blog.bookTitle.charAt(0)}
+              {/* Blog Thumbnail */}
+              <div className="relative h-56 w-full overflow-hidden">
+                {blog.image ? (
+                  <Image
+                    src={blog.image}
+                    alt={blog.bookTitle}
+                    fill
+                    className="object-cover group-hover:scale-105 transform transition duration-500"
+                  />
+                ) : (
+                  <div className="h-full w-full bg-gradient-to-r from-indigo-500 to-purple-600 flex items-center justify-center text-white font-bold text-2xl">
+                    {blog.bookTitle.charAt(0)}
+                  </div>
+                )}
               </div>
 
               {/* Blog Content */}
-              <div className="p-6 flex flex-col justify-between h-full">
-                <h2 className="text-gray-900 text-2xl font-bold mb-3 group-hover:text-indigo-600 transition-colors duration-300 line-clamp-2">
+              <div className="p-6 flex flex-col flex-1">
+                <h2 className="text-gray-900 text-xl font-bold mb-3 leading-snug group-hover:text-indigo-600 transition-colors duration-300">
                   {blog.bookTitle}
                 </h2>
 
@@ -39,12 +51,16 @@ export default function BlogCards() {
                     : blog.description}
                 </p>
 
-                <Link
-                  href={`/Blog/${blog.title}`}
-                  className="mt-auto inline-block bg-indigo-600 text-white font-semibold rounded-lg px-5 py-2 text-center shadow-md hover:bg-indigo-700 hover:shadow-lg transition-all duration-300"
-                >
-                  Read More →
-                </Link>
+                {/* Footer */}
+                <div className="mt-auto flex items-center justify-between pt-4 border-t border-gray-100">
+                  <span className="text-xs text-gray-400">{blog.date || "۱۴۰۴/۰۵/۲۵"}</span>
+                  <Link
+                    href={`/Blog/${blog.title}`}
+                    className="text-indigo-600 font-semibold hover:text-indigo-800 text-sm transition-colors duration-300"
+                  >
+                    ادامه مطلب →
+                  </Link>
+                </div>
               </div>
             </li>
           ))}
