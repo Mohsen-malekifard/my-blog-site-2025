@@ -32,8 +32,8 @@ export default function NavBar() {
       {isOpen && (
         <div className="md:hidden bg-gradient-to-r from-purple-600 via-pink-500 to-red-500 px-2 pt-2 pb-3 space-y-2 animate-slide-down">
           <Link href="/"><a className="block text-white px-3 py-2 rounded-lg hover:bg-purple-700 transition-all duration-300 font-semibold">Home</a></Link>
-          <Link href="/about"><a className="block text-white px-3 py-2 rounded-lg hover:bg-purple-700 transition-all duration-300 font-semibold">About</a></Link>
-          <Link href="/blog"><a className="block text-white px-3 py-2 rounded-lg hover:bg-purple-700 transition-all duration-300 font-semibold">Blog</a></Link>
+          <Link href="/About"><a className="block text-white px-3 py-2 rounded-lg hover:bg-purple-700 transition-all duration-300 font-semibold">About</a></Link>
+          <Link href="/Blog"><a className="block text-white px-3 py-2 rounded-lg hover:bg-purple-700 transition-all duration-300 font-semibold">Blog</a></Link>
         </div>
       )}
     </nav>
