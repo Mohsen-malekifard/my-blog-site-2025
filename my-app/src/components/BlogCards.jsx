@@ -21,7 +21,7 @@ export default function BlogCards() {
           {data5.map((blog) => (
             <li
               key={blog.id}
-              className="bg-white rounded-2xl shadow hover:shadow-xl transition duration-300 overflow-hidden border border-gray-200 group flex flex-col"
+              className="bg-gray-900 rounded-2xl shadow hover:shadow-xl transition duration-300 overflow-hidden border border-gray-200 group flex flex-col"
             >
               {/* Blog Thumbnail */}
               <div className="relative h-56 w-full overflow-hidden">
