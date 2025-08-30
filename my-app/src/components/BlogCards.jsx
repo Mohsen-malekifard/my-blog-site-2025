@@ -41,7 +41,7 @@ export default function BlogCards() {
 
               {/* Blog Content */}
               <div className="p-6 flex flex-col flex-1">
-                <h2 className="text-gray-900 text-xl font-bold mb-3 leading-snug group-hover:text-indigo-600 transition-colors duration-300">
+                <h2 className="text-white text-xl font-bold mb-3 leading-snug group-hover:text-indigo-600 transition-colors duration-300">
                   {blog.bookTitle}
                 </h2>
 
