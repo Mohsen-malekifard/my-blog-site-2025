@@ -9,7 +9,7 @@ export default function BlogCard() {
             {finded.map((blog, index) => (
                 <li 
                     key={index} 
-                    className="bg-black rounded-2xl shadow-lg hover:shadow-2xl transition duration-300 overflow-hidden group"
+                    className="bg-gray-900 rounded-2xl shadow-lg hover:shadow-2xl transition duration-300 overflow-hidden group"
                 >
                     <div className="p-5 flex flex-col h-full">
                         {/* Title */}
