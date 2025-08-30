@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function BlogCards() {
   return (
-    <div className="bg-gray-50 py-12">
+    <div className="bg-black py-12">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-12">
