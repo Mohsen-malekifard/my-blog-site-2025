@@ -8,7 +8,7 @@ export default function BlogCards() {
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-extrabold text-gray-900 sm:text-5xl">
+          <h1 className="text-4xl font-extrabold text-white sm:text-5xl">
             مقالات آموزشی
           </h1>
           <p className="mt-3 text-lg text-gray-600 max-w-2xl mx-auto">
